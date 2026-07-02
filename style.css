@@ -1,4 +1,20 @@
-#principal { 
+
+body {
+    background-image: url("assets/fundo.png");
+    background-size: cover;
+}
+
+#page {
+    box-sizing: border-box;
+   width:800px;
+   padding: 24px;
+   background-color: bisque;
+   border-radius: 24px;
+   margin: 48px auto;
+}
+
+img {
     border-radius: 10px;
-    
+     width: 100%;
+    height: auto;
 }
