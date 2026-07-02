@@ -1,3 +1,8 @@
+:root {
+    font-family: 'MedievalSharp', cursive;
+    line-height: 1.8;
+}
+  
 
 body {
     background-image: url("assets/fundo.png");
@@ -6,7 +11,7 @@ body {
 
 #page {
     box-sizing: border-box;
-   width:800px;
+   width:900px;
    padding: 24px;
    background-color: bisque;
    border-radius: 24px;
@@ -17,4 +22,33 @@ img {
     border-radius: 10px;
      width: 100%;
     height: auto;
+}
+
+.lists-container {
+    display: flex;         /* Ativa o modo Flexbox */
+    flex-wrap: wrap;       /* Se não couberem todos na mesma linha, eles quebram para a linha de baixo */
+    gap: 24px;             /* Cria um espaçamento uniforme entre os blocos (horizontal e vertical) */
+    justify-content: center; /* Centraliza os blocos na tela */
+    padding: 20px 0;
+}
+
+.list-card {
+    flex: 1 1 250px;       /* Permite que o bloco cresça/diminua, com tamanho base de 250px */
+    max-width: 320px;      /* Define um tamanho limite para não esticar demais em telas gigantes */
+    background-color: #a2987f; /* Um fundo opcional para destacar os blocos (pode alterar ou remover) */
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Sombra suave para dar profundidade */
+}
+
+.list-card h4 {
+    margin-top: 0;
+    color: bisque;
+    border-bottom: 2px solid bisque;
+    padding-bottom: 8px;
+}
+h2 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 24px;
 }
