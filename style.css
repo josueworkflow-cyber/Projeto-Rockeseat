@@ -1,44 +1,51 @@
 :root {
-    font-family: 'MedievalSharp', cursive;
-    line-height: 1.8;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
 }
   
 
 body {
-    background-image: url("assets/fundo.png");
+    background-image: url("assets/Dicas-de-viagens-em-Arraial-do-Cabo-Guia-Viajar-Melhor.webp");
+    background-size: cover;
+    background-attachment: fixed;
     background-size: cover;
 }
 
 #page {
     box-sizing: border-box;
-   width:900px;
+   width:700px;
    padding: 24px;
-   background-color: bisque;
+   background-color: rgb(131, 190, 227);
    border-radius: 24px;
    margin: 48px auto;
 }
 
-img {
+.imagem {
     border-radius: 10px;
-     width: 100%;
-    height: auto;
+     width: 650px;
+    
 }
 
 .lists-container {
-    display: flex;         /* Ativa o modo Flexbox */
-    flex-wrap: wrap;       /* Se não couberem todos na mesma linha, eles quebram para a linha de baixo */
-    gap: 24px;             /* Cria um espaçamento uniforme entre os blocos (horizontal e vertical) */
-    justify-content: center; /* Centraliza os blocos na tela */
+    display: flex;         
+    flex-wrap: wrap;       
+    gap: 24px;             
+    justify-content: center; 
     padding: 20px 0;
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
 }
 
 .list-card {
-    flex: 1 1 250px;       /* Permite que o bloco cresça/diminua, com tamanho base de 250px */
-    max-width: 320px;      /* Define um tamanho limite para não esticar demais em telas gigantes */
-    background-color: #a2987f; /* Um fundo opcional para destacar os blocos (pode alterar ou remover) */
+    flex: 1 1 250px;       
+    max-width: 320px;      
+    background-color: #749c7c; 
     padding: 16px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Sombra suave para dar profundidade */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
 }
 
 .list-card h4 {
@@ -47,14 +54,16 @@ img {
     border-bottom: 2px solid bisque;
     padding-bottom: 8px;
 }
-h2 {
-    text-align: center;
-    color: #000000;
-    margin-bottom: 24px;
-}
 
 footer {
     text-align: center;
     color: bisque;
     font-size: 20px;
+}
+
+h1, h2 {
+    font-family: 'Pacifico', cursive;
+    color: #3a5b61; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
+    justify-content: center;
 }
