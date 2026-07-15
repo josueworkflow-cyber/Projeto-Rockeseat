@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InstaFolioDev</title>
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+  <nav>
+    <a href="#" id="logo">
+      <img src="assets/devgram-icon.png" alt="logomarca">
+    </a>
+
+    <ul id="primary-menu">
+      <li>
+        <a href="#">explore</a>
+      </li>
+      <li>
+        <a href="#">Meus Trabalhos</a>
+      </li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="container">
+      <div id="profile">
+        <img src="assets/icons/icon-perfil.DNG" alt="foto-perfil">
+        <div>
+          <h3>Josué Tecla Bragança</h3>
+          <p>Militar das Forças Armadas <br>
+            Em transição para o ecossistema de tecnologia <br>
+            Focando no desenvolvimento Fullstack com a @Rocketseat <br>
+            Construindo o futuro linha por linha.</p>
+        </div>
+      </div>
+      <div class="info">
+        <ul>
+          <li><img src="assets/icons/MapPin.svg" alt="localizacao"><span>Rio De Janeiro, Brasil</span></li>
+          <li><img src="assets/icons/AirplaneTilt.svg" alt="email"><span>josue.tecla@hotmail.com</span></li>
+          <li><img src="assets/icons/Image.svg" alt="trabalhos-feitos"><span>4 projetos em produção</span> </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="feed">
+      <div class="project-card">
+        <h3>Acessoria Esportiva Elton Almeida</h3>
+        <img src="assets/imagem/elton.png" alt="Projeto Elton">
+        <p>Sistema desenvolvido para a Elton Almeida Assessoria Esportiva, focado em corredores que buscam
+          acompanhamento profissional, treinos personalizados e informações sobre provas e eventos. O objetivo é
+          oferecer uma experiência moderna, prática e responsiva para atletas de todos os níveis.</p>
+        <a href="#modal-elton" class="tech-btn">Ver Tecnologias</a>
+      </div>
+      <div class="project-card">
+        <h3>Dashboard administrativo para DAC Hospitalar</h3>
+        <img src="assets/imagem/dac.png" alt="Projeto DAC">
+        <p>Dashboard administrativo desenvolvido para a DAC Hospitalar, centralizando a gestão financeira,
+          acompanhamento do funil de vendas e indicadores estratégicos. A plataforma também conta com automações e envio
+          de alertas via WhatsApp, facilitando o monitoramento e a tomada de decisões em tempo real.</p>
+        <a href="#modal-dac" class="tech-btn">Ver Tecnologias</a>
+      </div>
+      <div class="project-card">
+        <h3>Dashboard para gestão de Vendas</h3>
+        <img src="assets/imagem/Isadora.png" alt="Projeto Isadora">
+        <p>Sistema de gestão comercial desenvolvido para acompanhar o desempenho de vendas em tempo real. A plataforma
+          reúne indicadores estratégicos, histórico de vendas, acompanhamento de metas, análise da Curva ABC, gráficos,
+          relatórios gerenciais e dashboards interativos, oferecendo suporte à tomada de decisões e ao aumento da
+          produtividade da equipe comercial..</p>
+        <a href="#modal-isadora" class="tech-btn">Ver Tecnologias</a>
+      </div>
+      <div class="project-card">
+        <h3>Sistema de Estoque simplificado</h3>
+        <img src="assets/imagem/izair.png" alt="Projeto Izair">
+        <p>Sistema de gestão de estoque desenvolvido para controlar entradas, saídas e disponibilidade de produtos de
+          forma simples e eficiente. Além do painel administrativo, a solução oferece um consultor de estoque via
+          WhatsApp, permitindo que vendedores em campo consultem produtos por texto ou áudio em tempo real, utilizando
+          Inteligência Artificial para interpretar as solicitações e agilizar o atendimento.</p>
+        <a href="#modal-izair" class="tech-btn">Ver Tecnologias</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal do Projeto Elton -->
+  <div id="modal-elton" class="modal-overlay">
+    <div class="modal-content">
+      <a href="#" class="close-btn" aria-label="Fechar Modal">&times;</a>
+      <h2>Assessoria Esportiva Elton Almeida</h2>
+      <div class="modal-body-scroll">
+        <p>O projeto é estruturado com uma arquitetura Full Stack, utilizando Node.js no backend e React no frontend.
+        </p>
+        <p>Abaixo estão detalhadas as principais tecnologias, bibliotecas e ferramentas utilizadas neste projeto.
+        </p>
+
+        <h3>1. Frontend <span class="highlight-blue">(Interface do Usuário)</span></h3>
+        <ul>
+          <li><strong>React 19</strong> <span class="highlight-blue">(react, react-dom)</span>: Framework principal para
+            construção da interface.</li>
+          <li><strong>React Router v7</strong> <span class="highlight-blue">(react-router-dom)</span>: Gerenciamento de
+            rotas e navegação da aplicação.</li>
+          <li><strong>Zustand</strong> <span class="highlight-blue">(zustand)</span>: Gerenciador de estado global leve
+            e moderno.</li>
+          <li><strong>Recharts</strong> <span class="highlight-blue">(recharts)</span>: Biblioteca de gráficos para
+            exibição da evolução dos atletas.</li>
+          <li><strong>Lucide React</strong> <span class="highlight-blue">(lucide-react)</span>: Conjunto de ícones
+            vetoriais modernos.</li>
+          <li><strong>Vite 8</strong> <span class="highlight-blue">(vite, @vitejs/plugin-react)</span>: Ferramenta de
+            build extremamente rápida para o desenvolvimento frontend.</li>
+          <li><strong>PWA <span class="highlight-blue">(Progressive Web App)</span></strong> <span
+              class="highlight-blue">(vite-plugin-pwa)</span>: Configurações para permitir que a aplicação seja
+            instalada e funcione como um aplicativo nativo no celular ou desktop.</li>
+        </ul>
+
+        <h3>2. Backend <span class="highlight-blue">(Servidor e APIs)</span></h3>
+        <p><strong>Node.js & Express 5</strong> <span class="highlight-blue">(express)</span>: Servidor HTTP e API REST.
+        </p>
+        <ul>
+          <li><strong>Segurança:</strong>
+            <ul>
+              <li><strong>Helmet</strong> <span class="highlight-blue">(helmet)</span>: Configuração de cabeçalhos HTTP
+                seguros.</li>
+              <li><strong>Express Rate Limit</strong> <span class="highlight-blue">(express-rate-limit)</span>: Proteção
+                contra ataques de força bruta limitando requisições.</li>
+              <li><strong>CORS</strong> <span class="highlight-blue">(cors)</span>: Permissões de compartilhamento de
+                recursos entre origens diferentes.</li>
+            </ul>
+          </li>
+          <li><strong>Autenticação:</strong>
+            <ul>
+              <li><strong>JSON Web Tokens</strong> <span class="highlight-blue">(jsonwebtoken)</span>: Geração e
+                validação de tokens para rotas protegidas.</li>
+              <li><strong>Bcrypt</strong> <span class="highlight-blue">(bcrypt)</span>: Criptografia e hashing seguro de
+                senhas.</li>
+            </ul>
+          </li>
+          <li><strong>Validação de dados:</strong> <strong>Express Validator</strong> <span
+              class="highlight-blue">(express-validator)</span>.</li>
+          <li><strong>Upload de arquivos:</strong> <strong>Multer</strong> e <strong>Multer S3</strong> para upload
+            direto para o Amazon S3 usando a SDK oficial da AWS <span
+              class="highlight-blue">(@aws-sdk/client-s3)</span>.</li>
+          <li><strong>Agendamento de tarefas:</strong> <strong>Node Cron</strong> <span
+              class="highlight-blue">(node-cron)</span> para execução de rotas ou rotinas periódicas em background.</li>
+          <li><strong>Automação:</strong> <strong>Puppeteer</strong> para renderização em navegador headless <span
+              class="highlight-blue">(Usado para gerar um certificado digital para o atleta)</span>.</li>
+          <li><strong>Notificações:</strong> <strong>Web Push</strong> <span class="highlight-blue">(web-push)</span>
+            para envio de notificações push direto nos navegadores dos atletas.</li>
+          <li><strong>Monitoramento:</strong> <strong>Sentry</strong> <span class="highlight-blue">(@sentry/node)</span>
+            para rastreamento de erros e monitoramento de performance em tempo real.</li>
+        </ul>
+
+        <h3>3. Banco de Dados e Migrações</h3>
+        <ul>
+          <li><strong>PostgreSQL</strong> <span class="highlight-blue">(pg)</span>: Banco de dados relacional utilizado.
+          </li>
+          <li><strong>Node PG Migrate</strong> <span class="highlight-blue">(node-pg-migrate)</span>: Ferramenta para
+            gerenciar e executar as migrações <span class="highlight-blue">(migrations)</span> estruturais do banco de
+            dados PostgreSQL usando Javascript/SQL.</li>
+        </ul>
+
+        <h3>4. Infraestrutura e DevOps</h3>
+        <ul>
+          <li><strong>Docker</strong> <span class="highlight-blue">(Dockerfile)</span>: Containerização baseada em
+            Alpine Linux com instalação prévia do Chromium para rodar o Puppeteer em ambiente isolado.</li>
+          <li><strong>Easypanel:</strong> Scripts de inicialização configurados para publicação simplificada na
+            plataforma Easypanel.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal do Projeto DAC -->
+  <div id="modal-dac" class="modal-overlay">
+    <div class="modal-content">
+      <a href="#" class="close-btn" aria-label="Fechar Modal">&times;</a>
+      <h2>Dashboard administrativo para DAC Hospitalar</h2>
+      <div class="modal-body-scroll">
+        <p>As principais tecnologias utilizadas no projeto são:</p>
+
+        <h3>1. Backend</h3>
+        <ul>
+          <li><strong>Node.js</strong>: Plataforma de execução.</li>
+          <li><strong>Express</strong>: Framework web para criação de APIs e rotas.</li>
+          <li><strong>dotenv</strong>: Gerenciamento de variáveis de ambiente.</li>
+          <li><strong>cors</strong>: Permissão de compartilhamento de recursos entre origens diferentes.</li>
+          <li><strong>JWT <span class="highlight-blue">(JSON Web Tokens)</span></strong>: Utilizado para autenticação e
+            rotas protegidas.</li>
+        </ul>
+
+        <h3>2. Banco de Dados / Integrações</h3>
+        <ul>
+          <li><strong>Google Sheets API v4</strong> <span class="highlight-blue">(via biblioteca oficial
+              googleapis)</span>: Utilizado como banco de dados principal em tempo real com mecanismo de cache em
+            memória.</li>
+        </ul>
+
+        <h3>3. Frontend</h3>
+        <ul>
+          <li><strong>Vanilla HTML5 & CSS3</strong>: Estrutura e estilização premium <span class="highlight-blue">(com
+              variáveis CSS e design responsivo)</span>.</li>
+          <li><strong>JavaScript Moderno</strong> <span class="highlight-blue">(ES6+)</span>: Lógica da aplicação
+            executada como uma SPA <span class="highlight-blue">(Single Page Application)</span>.</li>
+        </ul>
+
+        <h3>4. Infraestrutura</h3>
+        <ul>
+          <li><strong>Docker</strong>: O projeto conta com um <span class="highlight-blue">(Dockerfile)</span> para
+            conteinerização.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal do Projeto Isadora -->
+  <div id="modal-isadora" class="modal-overlay">
+    <div class="modal-content">
+      <a href="#" class="close-btn" aria-label="Fechar Modal">&times;</a>
+      <h2>Dashboard para gestão de Vendas</h2>
+      <div class="modal-body-scroll">
+        <p>O projeto é estruturado com uma arquitetura moderna para análise de métricas comerciais, fornecendo dados dinâmicos e exportação de relatórios.</p>
+        <p>Abaixo estão detalhadas as principais tecnologias, bibliotecas e ferramentas utilizadas neste projeto:</p>
+
+        <h3>1. Frontend <span class="highlight-blue">(Interface do Usuário)</span></h3>
+        <ul>
+          <li><strong>React.js</strong>: Biblioteca principal para construção de interfaces interativas e reativas.</li>
+          <li><strong>TypeScript</strong>: Superconjunto de JavaScript que adiciona tipagem estática para maior segurança do código.</li>
+          <li><strong>Chart.js / ApexCharts</strong>: Bibliotecas de gráficos para renderização visual e dinâmica dos dashboards e indicadores de vendas.</li>
+        </ul>
+
+        <h3>2. Backend <span class="highlight-blue">(Servidor e APIs)</span></h3>
+        <ul>
+          <li><strong>Node.js</strong>: Ambiente de execução de JavaScript no lado do servidor.</li>
+          <li><strong>Express.js</strong>: Framework leve e flexível para desenvolvimento de APIs robustas.</li>
+          <li><strong>ExcelJS</strong> <span class="highlight-blue">(Exportação de relatórios)</span>: Ferramenta utilizada para geração e exportação de planilhas de relatórios em formato Excel.</li>
+          <li><strong>PDFKit / jsPDF</strong> <span class="highlight-blue">(Geração de relatórios em PDF)</span>: Bibliotecas utilizadas para gerar arquivos PDF de relatórios dinamicamente no sistema.</li>
+        </ul>
+
+        <h3>3. Banco de Dados</h3>
+        <ul>
+          <li><strong>PostgreSQL</strong>: Banco de dados relacional potente para armazenamento seguro dos dados de vendas.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal do Projeto Izair -->
+  <div id="modal-izair" class="modal-overlay">
+    <div class="modal-content">
+      <a href="#" class="close-btn" aria-label="Fechar Modal">&times;</a>
+      <h2>Sistema de Estoque simplificado</h2>
+      <div class="modal-body-scroll">
+        <p>O projeto é estruturado com uma arquitetura robusta integrando Inteligência Artificial e automação de
+          mensagens, focado em consultas e gerenciamento de estoque em tempo real.</p>
+        <p>Abaixo estão detalhadas as principais tecnologias, bibliotecas e ferramentas utilizadas neste projeto:</p>
+
+        <h3>1. Frontend <span class="highlight-blue">(Interface do Usuário)</span></h3>
+        <ul>
+          <li><strong>React 19</strong>: Biblioteca JavaScript para construção da interface de usuário.</li>
+          <li><strong>Vite</strong>: Ferramenta de build e servidor de desenvolvimento super rápido.</li>
+          <li><strong>Lucide React</strong>: Pacote de ícones modernos e limpos.</li>
+          <li><strong>CSS Vanilla</strong>: Estilização tradicional direta em CSS.</li>
+        </ul>
+
+        <h3>2. Backend <span class="highlight-blue">(Servidor e APIs)</span></h3>
+        <ul>
+          <li><strong>Node.js <span class="highlight-blue">(v20)</span></strong>: Ambiente de execução JavaScript no
+            servidor.</li>
+          <li><strong>Express <span class="highlight-blue">(v5)</span></strong>: Framework web para criação de rotas
+            HTTP e gerenciamento do servidor.</li>
+          <li><strong>gRPC</strong> <span class="highlight-blue">(@grpc/grpc-js)</span>: Protocolo de comunicação de
+            alta performance para chamadas de procedimentos remotos.</li>
+          <li><strong>Prisma Client <span class="highlight-blue">(v6)</span></strong>: ORM <span
+              class="highlight-blue">(Object-Relational Mapping)</span> utilizado para modelagem de banco de dados e
+            consultas de forma segura e tipada.</li>
+          <li><strong>Zod</strong>: Biblioteca de declaração de esquemas e validação de dados.</li>
+          <li><strong>JWT <span class="highlight-blue">(JSON Web Token)</span> &amp; BcryptJS</strong>: Usados para
+            autenticação, controle de sessão e criptografia/hashing de senhas.</li>
+          <li><strong>Multer</strong>: Middleware para tratamento de upload de arquivos <span
+              class="highlight-blue">(multipart/form-data)</span>.</li>
+          <li><strong>PDF-Parse</strong>: Biblioteca para extração e processamento de dados contidos em arquivos PDF.
+          </li>
+        </ul>
+
+        <h3>3. Inteligência Artificial <span class="highlight-blue">(NVIDIA NIM APIs)</span></h3>
+        <ul>
+          <li><strong>Meta Llama 3.1 8B Instruct</strong>: Modelo de linguagem <span class="highlight-blue">(LLM)</span>
+            utilizado para processar e inferir as intenções de busca do usuário <span class="highlight-blue">(como
+              extrair nomes e códigos de produtos a partir de mensagens)</span>.</li>
+          <li><strong>OpenAI Whisper Large v3</strong> <span class="highlight-blue">(via NVIDIA Riva gRPC)</span>:
+            Utilizado para transcrever as mensagens de áudio/voz enviadas pelos usuários em português <span
+              class="highlight-blue">(pt-BR)</span> para texto.</li>
+        </ul>
+
+        <h3>4. Integração do WhatsApp</h3>
+        <ul>
+          <li><strong>Evolution API</strong>: Utilizada para conectar o fluxo do WhatsApp ao backend, gerenciando o
+            envio e recebimento de mensagens e mídias, permitindo que os clientes consultem o estoque diretamente por
+            conversa.</li>
+        </ul>
+
+        <h3>5. Banco de Dados e Infraestrutura</h3>
+        <ul>
+          <li><strong>PostgreSQL</strong>: Banco de dados relacional.</li>
+          <li><strong>Docker</strong>: Utilizado para empacotamento, distribuição e execução em contêineres através do
+            <span class="highlight-blue">(Dockerfile)</span>.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

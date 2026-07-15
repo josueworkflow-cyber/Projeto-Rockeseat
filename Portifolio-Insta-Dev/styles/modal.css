@@ -1,0 +1,189 @@
+/* Botão "Ver Tecnologias" no card (agora tag <a>) */
+.tech-btn {
+  background-color: transparent;
+  color: var(--brand-color);
+  border: 1px solid var(--brand-color);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  width: fit-content;
+  align-self: center;
+  display: inline-block;
+}
+
+.tech-btn:hover {
+  background-color: var(--brand-color);
+  color: #ffffff;
+  text-decoration: none;
+  transform: scale(1.05);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  
+  /* Escondido por padrão para não pesar na renderização */
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease, background-color 0.25s ease;
+}
+
+/* Ativado via target da âncora */
+.modal-overlay:target {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/* Caixa do Modal */
+.modal-content {
+  background-color: var(--background-color);
+  color: var(--texto-color-primary);
+  width: 90%;
+  max-width: 650px;
+  max-height: 80vh;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.4);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-30px);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-family: var(--font-family);
+}
+
+.modal-overlay:target .modal-content {
+  transform: translateY(0);
+}
+
+/* Botão de Fechar */
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--texto-color-secondary);
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  color: var(--brand-color);
+  text-decoration: none;
+  transform: rotate(90deg);
+}
+
+/* Scroll Interno do Modal */
+.modal-body-scroll {
+  overflow-y: auto;
+  padding-right: 12px;
+  margin-top: 10px;
+}
+
+/* Scrollbar Personalizada */
+.modal-body-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-body-scroll::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.modal-body-scroll::-webkit-scrollbar-thumb {
+  background: var(--skeleton-color);
+  border-radius: 10px;
+}
+
+/* Estilos de Letras e Cores no Modal */
+.modal-content h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  color: var(--texto-color-primary);
+  border-bottom: 1px solid var(--surface-color);
+}
+
+.modal-body-scroll p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--texto-color-primary);
+  margin-bottom: 16px;
+}
+
+.modal-body-scroll h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  color: var(--brand-color);
+}
+
+.modal-body-scroll ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.modal-body-scroll li {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--texto-color-secondary);
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 18px;
+}
+
+/* Marcador estilizado para os tópicos */
+.modal-body-scroll li::before {
+  content: "•";
+  color: var(--brand-color);
+  font-weight: bold;
+  position: absolute;
+  left: 4px;
+}
+
+.modal-body-scroll strong {
+  color: var(--texto-color-primary);
+}
+
+/* Badges de Código em Azul Fluorescente Escuro */
+.highlight-blue {
+  color: #0055ff;
+  font-family: "JetBrains Mono", Courier, monospace;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: rgba(0, 85, 255, 0.08);
+  border: 1px solid rgba(0, 85, 255, 0.15);
+  padding: 2px 6px;
+  border-radius: 6px;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: middle;
+}
